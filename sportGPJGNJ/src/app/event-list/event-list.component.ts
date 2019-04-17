@@ -13,7 +13,18 @@ export class EventListComponent implements OnInit {
 //   event1
 // };
 
+event :{
+ id:1232,
+ titre:'titre',
+ description:'ça va être sympa',
+  dateEvent:'demain',
+  horaire:'12h',
+ sport:'Rugby',
+ createur:'Moi moi moi',
+ nbrParticipants:'1',
+ nbrmax:'number',
 
+}
 //ListEvent1.add(event);
 
 //new Evenement(21,'','','','','','','','',);
