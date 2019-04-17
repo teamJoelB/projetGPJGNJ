@@ -23,6 +23,10 @@ import { InscriptionComponent } from './inscription/inscription.component'
       {
         path: 'create',
         component: CreationEventComponent
+      },
+      {
+        path: "connexion",
+        component: ConnectionComponent
       }
     ])
   ],
