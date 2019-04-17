@@ -22,7 +22,6 @@ export class ConnectionComponent implements OnInit {
   tryLogin() {
     this.http.post('http://localhost:8080/userconnexion', this.user).subscribe(data => {
       this.u = data.json();
-      console.log('this.u :: ', this.u);
       if (!(this.u['id'] === 'undefined' || this.u['id'] === null || this.u['id'] === "")) {
         this.services.setLocalUser(JSON.stringify(this.u));
         this.router.navigate(['/evenements']);
