@@ -1,10 +1,5 @@
 export class Sport{
-    constructor(id,nom,nbrMin,nbrMax,lien){
-        this.id=id;
-        this.nom=nom;
-        this.nbrMin=nbrMin;
-        this.nbrMax=nbrMax;
-        this.lien=lien;
+    constructor(){
     }
     id:number;
     nom:string;

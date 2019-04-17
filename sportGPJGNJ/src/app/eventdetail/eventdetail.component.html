@@ -1,16 +1,78 @@
-<div>
-  <h1>
-    Détail de l'évènement :
-  </h1>
-<!--
- <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+<div *ngIf = "loaded" class="card" style="width: 18rem;">
+    <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+    <div class="card-body">
+      <h2 class="card-title">{{data.titre}}</h2>
+      <h3 class="card-text">{{data.description}}</h3>
+    
+<!--*ngIf = "{{data.sport.nom}} == 'Tennis'"-->
+      
+      <div *ngIf = "data.sport.nom == 'Tennis'">
+          <img class="card-img-top" 
+          src="http://img.over-blog-kiwi.com/1/04/67/49/20180517/ob_3947f6_rg-2018.JPG" 
+          alt="Card image cap">
+      </div>
+      <div *ngIf = "data.sport.nom == 'Football'">
+          <img class="card-img-top" 
+          src="https://img.uefa.com/imgml/uefacom/ucl/fallback.jpg" 
+          alt="Card image cap">
+      </div>
+      <div *ngIf = "data.sport.nom == 'Volley'">
+          <img class="card-img-top" 
+          src="https://i.ytimg.com/vi/h_QyTcPD1G4/maxresdefault.jpg" 
+          alt="Card image cap">
+      </div>
+      <div *ngIf = "data.sport.nom == 'Basketball'">
+          <img class="card-img-top" 
+          src="https://upload.wikimedia.org/wikipedia/fr/thumb/8/87/NBA_Logo.svg/477px-NBA_Logo.svg.png" 
+          alt="Card image cap">
+      </div>
+      <div *ngIf = "data.sport.nom == 'Badminton'">
+          <img class="card-img-top" 
+          src="https://www.badminton-extra.fr/wp-content/uploads/2018/10/Badminton-1500x475.jpg" 
+          alt="Card image cap">
+      </div>
+      <div *ngIf = "data.sport.nom == 'Course à pied'">
+          <img class="card-img-top" 
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Yohann_Diniz_Zurich_2014_3.jpg/270px-Yohann_Diniz_Zurich_2014_3.jpg" 
+          alt="Card image cap">
+      </div>
+
+    </div>
+    <ul class="list-group list-group-flush">
+      
+      <li class="list-group-item">Sport : {{data.sport.nom}}</li>
+      <li class="list-group-item">Date de l'évènement : {{data.dateEvent}}</li>
+      <li class="list-group-item">Heure de l'évènement : {{data.horaire}}</li>
+      <li class="list-group-item">Participants : {{data.nbrParticipants}} / {{data.nbrmax}}</li>
+    </ul>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+      Det........
+    </button>
+  </div>
+
+  <hr>
+
+
+ <!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
       </div>
     </div>
--->
- 
-</div>
+  </div>

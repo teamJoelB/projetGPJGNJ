@@ -8,17 +8,20 @@ import { ConnectionComponent } from './connection/connection.component';
 import { CreationEventComponent } from './creation-event/creation-event.component';
 import { EventdetailComponent } from './eventdetail/eventdetail.component';
 import { MaterialModule } from './material';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     ConnectionComponent,
-    CreationEventComponent
+    CreationEventComponent,
+    EventdetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     MaterialModule,
+    HttpModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
       {

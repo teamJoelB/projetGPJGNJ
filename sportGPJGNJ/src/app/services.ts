@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class ServicesService {
 
+  eventId;
   constructor() { }
 
   getLocalUser(){
@@ -12,5 +13,11 @@ export class ServicesService {
   }
   setLocalUser(){
     return new Date();
+  }
+  getEventId(){
+    return this.eventId;
+  }
+  setEventId(id){
+    this.eventId = id;
   }
 }
