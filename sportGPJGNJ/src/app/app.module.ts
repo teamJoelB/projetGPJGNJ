@@ -29,6 +29,10 @@ import { InscriptionComponent } from './inscription/inscription.component'
       {
         path: "connexion",
         component: ConnectionComponent
+      },
+      {
+        path: "inscription",
+        component: InscriptionComponent
       }
     ])
   ],

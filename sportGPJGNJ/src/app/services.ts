@@ -21,5 +21,6 @@ export class ServicesService {
     }, err => {
       console.log(err);
     });
+    return true;
   }
 }

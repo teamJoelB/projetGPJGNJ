@@ -9,7 +9,7 @@ import { ServicesService } from '../services'
 })
 export class InscriptionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service : ServicesService) { }
 
   user : User = new User();
 
@@ -17,7 +17,9 @@ export class InscriptionComponent implements OnInit {
   }
 
   createUser(){
-    
+    if(this.service.checkUser(this.user)){
+
+    }
   }
 
 }
