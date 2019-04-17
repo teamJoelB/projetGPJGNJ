@@ -7,13 +7,8 @@ import { AppComponent } from './app.component';
 import { ConnectionComponent } from './connection/connection.component';
 import { CreationEventComponent } from './creation-event/creation-event.component';
 import { MaterialModule } from './material';
-<<<<<<< HEAD
 import { InscriptionComponent } from './inscription/inscription.component'
 import { HttpModule } from '@angular/http';
-
-=======
-import { HttpModule } from '@angular/http';
->>>>>>> bf14e3a93055dd0ad9b1a2e4104375797b8e2760
 
 @NgModule({
   declarations: [
