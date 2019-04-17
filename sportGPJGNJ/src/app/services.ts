@@ -1,16 +1,28 @@
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http'; 
+import { HttpModule } from '@angular/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServicesService {
-
-  constructor() { }
+link ='http://localhost:8080';
+  constructor(private http : Http) { }
 
   getLocalUser(){
-    return new Date();
+    return localStorage.getItem('user');
   }
-  setLocalUser(){
-    return new Date();
+  setLocalUser(stringifiedJSONUser){
+    localStorage.setItem('user',stringifiedJSONUser);
+  }
+
+  saveUser(user){
+    this.http.post(this.link+'/user', user).subscribe(data => {
+      console.log(data);
+    }, err => {
+      console.log(err);
+    });
+    return true;
   }
 }

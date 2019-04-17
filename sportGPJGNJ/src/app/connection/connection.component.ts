@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { User } from '../Class/User';
+import { ServicesService } from '../services';
 
 @Component({
   selector: 'app-connection',
@@ -10,14 +11,16 @@ import { User } from '../Class/User';
 export class ConnectionComponent implements OnInit {
 
   user:User = new User();
-  constructor(private http:Http) { }
+  u;
+  constructor(private http:Http,private services:ServicesService) { }
 
   ngOnInit() {
   }
 
   tryLogin() {
-    this.http.post('http://localhost:8080/adress', this.user).subscribe(data => {
-      console.log(data);
+    this.http.post('http://localhost:8080/userconnexion', this.user).subscribe(data => {
+      this.u = data.json();
+      this.services.setLocalUser(JSON.stringify(this.u));
     }, err => {
       console.log(err);
     });

@@ -8,19 +8,24 @@ import { ConnectionComponent } from './connection/connection.component';
 import { CreationEventComponent } from './creation-event/creation-event.component';
 import { EventListComponent } from './event-list/event-list.component';
 import { MaterialModule } from './material';
+import { InscriptionComponent } from './inscription/inscription.component'
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     ConnectionComponent,
     CreationEventComponent,
-    EventListComponent
+    EventListComponent,
+    InscriptionComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     MaterialModule,
+    HttpModule,
     BrowserAnimationsModule,
+    HttpModule,
     RouterModule.forRoot([
       {
         path: 'create',
@@ -33,7 +38,9 @@ import { MaterialModule } from './material';
       {
         path: "evenements",
         component: EventListComponent
-        
+      },{
+        path: "inscription",
+        component: InscriptionComponent
       }
     ])
   ],
