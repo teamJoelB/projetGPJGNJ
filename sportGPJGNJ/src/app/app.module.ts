@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { ConnectionComponent } from './connection/connection.component';
 import { CreationEventComponent } from './creation-event/creation-event.component';
+import { MaterialModule } from './material';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { CreationEventComponent } from './creation-event/creation-event.componen
   imports: [
     BrowserModule,
     FormsModule,
+    MaterialModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
       {
