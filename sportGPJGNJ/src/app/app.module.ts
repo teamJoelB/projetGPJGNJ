@@ -21,6 +21,10 @@ import { CreationEventComponent } from './creation-event/creation-event.componen
       {
         path: 'create',
         component: CreationEventComponent
+      },
+      {
+        path: "connexion",
+        component: ConnectionComponent
       }
     ])
   ],

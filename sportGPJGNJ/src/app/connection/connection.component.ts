@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
+import { User } from '../Class/User';
 
 @Component({
   selector: 'app-connection',
@@ -8,6 +9,7 @@ import { Http } from '@angular/http';
 })
 export class ConnectionComponent implements OnInit {
 
+  user:User = new User();
   constructor(private http:Http) { }
 
   ngOnInit() {
@@ -20,6 +22,4 @@ export class ConnectionComponent implements OnInit {
       console.log(err);
     });
   }
-}
-
 }
