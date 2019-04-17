@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../Class/User';
-import { Http } from '@angular/http';
+import { ServicesService } from '../services'
 
 @Component({
   selector: 'app-inscription',
@@ -9,7 +9,7 @@ import { Http } from '@angular/http';
 })
 export class InscriptionComponent implements OnInit {
 
-  constructor(private http : Http) { }
+  constructor() { }
 
   user : User = new User();
 
