@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ConnectionComponent } from './connection/connection.component';
 import { CreationEventComponent } from './creation-event/creation-event.component';
 import { MaterialModule } from './material';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MaterialModule } from './material';
     FormsModule,
     MaterialModule,
     BrowserAnimationsModule,
+    HttpModule,
     RouterModule.forRoot([
       {
         path: 'create',

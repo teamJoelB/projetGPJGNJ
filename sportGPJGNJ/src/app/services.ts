@@ -8,9 +8,9 @@ export class ServicesService {
   constructor() { }
 
   getLocalUser(){
-    return new Date();
+    return localStorage.getItem('user');
   }
-  setLocalUser(){
-    return new Date();
+  setLocalUser(stringifiedJSONUser){
+    localStorage.setItem('user',stringifiedJSONUser);
   }
 }
