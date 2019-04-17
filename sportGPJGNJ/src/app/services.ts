@@ -16,7 +16,7 @@ export class ServicesService {
   }
 
   checkUser(user){
-    this.http.post('http://localhost:8080/adress', user).subscribe(data => {
+    this.http.post('http://localhost:8080/', user).subscribe(data => {
       console.log(data);
     }, err => {
       console.log(err);

@@ -16,7 +16,7 @@ export class ConnectionComponent implements OnInit {
   }
 
   tryLogin() {
-    this.http.post('http://localhost:8080/adress', this.user).subscribe(data => {
+    this.http.post('http://localhost:8080/userconnexion', this.user).subscribe(data => {
       console.log(data);
     }, err => {
       console.log(err);
