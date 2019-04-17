@@ -1,0 +1,23 @@
+<div style = "margin: auto;  width: 60%"> 
+  <form #formul="ngForm" (ngSubmit)="createUser()"> 
+  <div class="form-group">
+   <input type="text" class="form-control" placeholder="prenom" name="prenom" #prenomAct = "ngModel"  [(ngModel)] = "user.prenom" required>
+   <div [hidden]="prenomAct.valid" style="color : orangered">
+     la zone ne peut être vide
+   </div>
+  </div>
+  <div class="form-group" >
+    <input type="text" class="form-control" #rueAct = "ngModel" placeholder="nom" name="nom" [(ngModel)] = "user.nom" required>
+   </div>
+   <div class="form-group">
+    <input type="text" class="form-control" #codeAct = "ngModel" placeholder="pseudo" name="pseudo" [(ngModel)] = "user.pseudo" required>
+   </div>
+   <div class="form-group">
+    <input type="text" class="form-control" #villeAct = "ngModel" placeholder="email" name ="mail" [(ngModel)] = "user.mail" required>
+   </div>
+   <div class="form-group">
+    <input type="text" class="form-control" #villeAct = "ngModel" placeholder="mot de passe" name ="mdp" [(ngModel)] = "user.mdp" required>
+   </div>
+   <button [disabled]="!formul.form.valid" class="btn btn-primary btn-block">Valider</button>
+  </form>
+  </div>

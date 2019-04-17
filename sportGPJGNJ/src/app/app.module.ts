@@ -8,6 +8,8 @@ import { ConnectionComponent } from './connection/connection.component';
 import { CreationEventComponent } from './creation-event/creation-event.component';
 import { EventdetailComponent } from './eventdetail/eventdetail.component';
 import { MaterialModule } from './material';
+import { EventListComponent } from './event-list/event-list.component';
+import { InscriptionComponent } from './inscription/inscription.component';
 import { HttpModule } from '@angular/http';
 
 @NgModule({
@@ -15,7 +17,9 @@ import { HttpModule } from '@angular/http';
     AppComponent,
     ConnectionComponent,
     CreationEventComponent,
-    EventdetailComponent
+    EventdetailComponent,
+    EventListComponent,
+    InscriptionComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +27,7 @@ import { HttpModule } from '@angular/http';
     MaterialModule,
     HttpModule,
     BrowserAnimationsModule,
+    HttpModule,
     RouterModule.forRoot([
       {
         path: 'create',
@@ -31,10 +36,26 @@ import { HttpModule } from '@angular/http';
       {
         path : 'consult',
         component : EventdetailComponent
-      }
+      },
+      {
+        path : "connexion",
+        component : ConnectionComponent
+      },
+      {
+        path: "evenements",
+        component: EventListComponent
+      },
+      {
+        path: "inscription",
+        component: InscriptionComponent
+      },
+      { path: "",
+      redirectTo: '/connexion',
+      pathMatch: 'full' },
     ])
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
