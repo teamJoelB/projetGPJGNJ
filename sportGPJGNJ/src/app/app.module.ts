@@ -23,6 +23,10 @@ import { MaterialModule } from './material';
       {
         path: 'create',
         component: CreationEventComponent
+      },
+      {
+        path: "connexion",
+        component: ConnectionComponent
       }
     ])
   ],
