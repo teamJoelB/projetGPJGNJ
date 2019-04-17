@@ -6,12 +6,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { ConnectionComponent } from './connection/connection.component';
 import { CreationEventComponent } from './creation-event/creation-event.component';
+import { InscriptionComponent } from './inscription/inscription.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     ConnectionComponent,
-    CreationEventComponent
+    CreationEventComponent,
+    InscriptionComponent
   ],
   imports: [
     BrowserModule,
