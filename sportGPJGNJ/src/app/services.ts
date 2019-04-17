@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import { HttpClientModule } from '@angular/common/http'; 
-import { HttpModule } from '@angular/http';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +8,9 @@ export class ServicesService {
 link ='http://localhost:8080';
   constructor(private http : Http) { }
 
-  getLocalUser(){
-    return localStorage.getItem('user');
+  isUserConnected(){
+    let temp = localStorage.getItem('user');
+    return !((temp === 'undefined' || temp === null || temp === ""))
   }
   setLocalUser(stringifiedJSONUser){
     localStorage.setItem('user',stringifiedJSONUser);

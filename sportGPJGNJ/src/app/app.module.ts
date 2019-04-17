@@ -38,13 +38,18 @@ import { HttpModule } from '@angular/http';
       {
         path: "evenements",
         component: EventListComponent
-      },{
+      },
+      {
         path: "inscription",
         component: InscriptionComponent
-      }
+      },
+      { path: "",
+      redirectTo: '/connexion',
+      pathMatch: 'full' },
     ])
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
