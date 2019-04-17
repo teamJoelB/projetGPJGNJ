@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ConnectionComponent } from './connection/connection.component';
 import { CreationEventComponent } from './creation-event/creation-event.component';
 import { EventdetailComponent } from './eventdetail/eventdetail.component';
+import { MaterialModule } from './material';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { EventdetailComponent } from './eventdetail/eventdetail.component';
   imports: [
     BrowserModule,
     FormsModule,
+    MaterialModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
       {
