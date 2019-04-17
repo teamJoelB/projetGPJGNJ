@@ -17,8 +17,8 @@ export class InscriptionComponent implements OnInit {
   }
 
   createUser(){
-    if(this.service.checkUser(this.user)){
-
+    if(this.service.saveUser(this.user)){
+        return true;
     }
   }
 

@@ -8,6 +8,8 @@ import { ConnectionComponent } from './connection/connection.component';
 import { CreationEventComponent } from './creation-event/creation-event.component';
 import { MaterialModule } from './material';
 import { InscriptionComponent } from './inscription/inscription.component'
+import { HttpModule } from '@angular/http';
+
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { InscriptionComponent } from './inscription/inscription.component'
     BrowserModule,
     FormsModule,
     MaterialModule,
+    HttpModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
       {
