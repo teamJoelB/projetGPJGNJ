@@ -11,10 +11,10 @@ export class ServicesService {
   constructor(private http : Http) { }
 
   getLocalUser(){
-    return new Date();
+    return localStorage.getItem('user');
   }
-  setLocalUser(){
-    return new Date();
+  setLocalUser(stringifiedJSONUser){
+    localStorage.setItem('user',stringifiedJSONUser);
   }
 
   saveUser(user){

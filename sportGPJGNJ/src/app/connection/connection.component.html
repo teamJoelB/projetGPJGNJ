@@ -1,16 +1,17 @@
-<div class="card mt-5" style="margin:auto;width: 600px;">
-  <div class="card-body">
-    <h5 class="card-title">Login</h5>
-    <form #formAct="ngForm" (ngSubmit)="login()">
+<div class="col d-flex justify-content-center">
+  <div class="card text-center" style="width: 24rem;box-shadow: 0 19px 38px rgba(0,0,0,0.30);border-radius: 0rem;">
+    <h2>Connexion</h2>
+    <form class="example-form" #formAct="ngForm" (ngSubmit)="tryLogin()">
       <div class="form-group">
-        <label for="email">Email</label>
-        <input type="text" class="form-control" id="email" placeholder="Pseudo" #mailAct [(ngModel)]="user.pseudo">
+        <input type="text" class="form-control" placeholder="Pseudo" required name="pseudo" #pseudoAct="ngModel"
+          [(ngModel)]="user.pseudo">
       </div>
+
       <div class="form-group">
-        <label for="email">Password</label>
-        <input type="password" class="form-control" id="password" placeholder="Mot de passe" #mdpAct [(ngModel)]="user.mdp">
+        <input type="password" class="form-control" placeholder="Mot de passe" required name="mdp" #numAct="ngModel"
+          [(ngModel)]="user.mdp">
       </div>
-      <button [disabled]="!formAct.form.valid" class="btn btn-primary btn-bloc">Login</button>
+      <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>
 </div>
