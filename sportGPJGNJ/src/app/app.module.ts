@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { ConnectionComponent } from './connection/connection.component';
 import { CreationEventComponent } from './creation-event/creation-event.component';
+import { MaterialModule } from './material';
 import { InscriptionComponent } from './inscription/inscription.component'
 
 @NgModule({
@@ -18,6 +19,7 @@ import { InscriptionComponent } from './inscription/inscription.component'
   imports: [
     BrowserModule,
     FormsModule,
+    MaterialModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
       {
