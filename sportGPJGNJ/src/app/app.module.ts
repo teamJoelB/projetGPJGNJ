@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { ConnectionComponent } from './connection/connection.component';
 import { CreationEventComponent } from './creation-event/creation-event.component';
+import { EventdetailComponent } from './eventdetail/eventdetail.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,10 @@ import { CreationEventComponent } from './creation-event/creation-event.componen
       {
         path: 'create',
         component: CreationEventComponent
+      },
+      {
+        path : 'consult',
+        component : EventdetailComponent
       }
     ])
   ],
